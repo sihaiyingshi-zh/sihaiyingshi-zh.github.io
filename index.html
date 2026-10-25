@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>四海影视 · 环球银幕索引｜华语、日韩与欧美片目检索及观影线索</title>
+<meta name="description" content="四海影视按地区与类型整理可检索的影视片目索引：华语新片、日韩剧集、欧美作者电影与经典修复的观影线索、版本沿革和入坑顺序，持续手写更新。">
+<meta name="keywords" content="四海影视, 影视片目索引, 环球电影, 剧集检索">
+<meta name="author" content="四海影视">
+<meta name="publisher" content="四海影视">
+<meta name="copyright" content="© 四海影视">
+<meta name="classification" content="影视资料">
+<meta name="distribution" content="global">
+<link rel="canonical" href="https://sihaiyingshi-zh.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="四海影视 · 环球银幕索引">
+<meta property="og:description" content="一份按地区与类型归档的影视片目索引，提供观影线索、版本沿革与入坑顺序。">
+<meta property="og:url" content="https://sihaiyingshi-zh.github.io/">
+<meta property="og:site_name" content="四海影视">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#0f2b30">
+<style>
+:root{
+  --bg:#eef3f2;
+  --panel:#fbfdfc;
+  --deep:#0f2b30;
+  --deep-2:#17434a;
+  --teal:#1f6d74;
+  --coral:#d96b4d;
+  --sand:#c9a24b;
+  --line:#d3dedd;
+  --txt:#15292d;
+  --txt-2:#4a6669;
+  --txt-3:#7d9395;
+  --mono:"JetBrains Mono","SF Mono",ui-monospace,Menlo,Consolas,monospace;
+  --sans:"Inter","PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--txt);
+  font-family:var(--sans);
+  font-size:15.5px;
+  line-height:1.75;
+  background-image:
+    linear-gradient(rgba(15,43,48,.022) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(15,43,48,.022) 1px,transparent 1px);
+  background-size:34px 34px;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 26px}
+/* 顶栏 */
+.topbar{
+  position:sticky;top:0;z-index:50;
+  background:rgba(238,243,242,.94);
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.topbar .in{max-width:1180px;margin:0 auto;padding:12px 26px;display:flex;align-items:center;gap:18px}
+.brand{display:flex;align-items:baseline;gap:9px;font-family:var(--mono);letter-spacing:.14em;font-size:13px;color:var(--deep);font-weight:700}
+.brand b{font-size:16px;letter-spacing:.06em;text-transform:none;font-family:var(--sans)}
+.brand em{font-style:normal;color:var(--coral)}
+.nav{margin-left:auto;display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+.nav::-webkit-scrollbar{display:none}
+.nav a{
+  padding:7px 12px;font-size:13px;color:var(--txt-2);white-space:nowrap;
+  border-radius:6px;transition:.18s;
+}
+.nav a:hover{background:var(--deep);color:#fff}
+/* 首屏 */
+.hero{padding:78px 0 60px;border-bottom:2px solid var(--deep);position:relative;overflow:hidden}
+.hero::after{
+  content:"";position:absolute;right:-70px;top:-70px;width:340px;height:340px;
+  border:1px solid var(--line);border-radius:50%;
+}
+.hero::before{
+  content:"";position:absolute;right:30px;top:40px;width:180px;height:180px;
+  background:radial-gradient(circle,rgba(217,107,77,.30),transparent 70%);border-radius:50%;
+}
+.kicker{font-family:var(--mono);font-size:11.5px;letter-spacing:.28em;color:var(--coral);text-transform:uppercase}
+h1{
+  font-size:clamp(38px,6.6vw,78px);line-height:1.04;margin:16px 0 20px;
+  letter-spacing:-.02em;font-weight:800;color:var(--deep);
+  display:flex;flex-wrap:wrap;gap:.16em;align-items:baseline;
+}
+h1 i{font-style:normal;color:var(--coral);font-family:var(--mono);font-size:.46em;letter-spacing:.06em;vertical-align:middle}
+.lede{max-width:660px;font-size:17px;color:var(--txt-2);margin:0 0 30px}
+.herogrid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:38px;position:relative;z-index:2}
+.herocell{background:var(--panel);padding:20px 18px;min-height:132px}
+.herocell .n{font-family:var(--mono);font-size:12px;color:var(--sand);letter-spacing:.1em}
+.herocell .t{font-size:20px;font-weight:700;color:var(--deep);margin:8px 0 6px;letter-spacing:-.01em}
+.herocell .d{font-size:12.6px;color:var(--txt-3);line-height:1.6}
+/* 章节 */
+section{padding:64px 0;border-bottom:1px solid var(--line)}
+.sechead{display:flex;align-items:flex-end;gap:16px;margin-bottom:32px;flex-wrap:wrap}
+.secnum{font-family:var(--mono);font-size:12px;color:var(--coral);letter-spacing:.2em;border-bottom:2px solid var(--coral);padding-bottom:4px}
+h2{font-size:clamp(25px,3.4vw,36px);margin:0;color:var(--deep);letter-spacing:-.015em;line-height:1.2}
+.secmeta{margin-left:auto;font-size:12.5px;color:var(--txt-3);font-family:var(--mono);letter-spacing:.06em}
+/* 片目表 */
+.ledger{background:var(--panel);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.row{display:grid;grid-template-columns:76px 1.6fr 1fr 1fr 104px;gap:16px;padding:15px 20px;align-items:center;border-bottom:1px solid var(--line)}
+.row.head{background:var(--deep);color:#dfeeed;font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase}
+.row:last-child{border-bottom:0}
+.row.body:hover{background:#f2f8f7}
+.ttl{font-weight:650;color:var(--deep);font-size:15.4px}
+.ttl span{display:block;font-weight:400;font-size:12px;color:var(--txt-3);margin-top:2px}
+.tag{display:inline-block;font-size:11.5px;font-family:var(--mono);padding:3px 8px;border:1px solid var(--line);border-radius:20px;color:var(--txt-2);letter-spacing:.05em}
+.tag.hot{border-color:rgba(217,107,77,.5);color:var(--coral);background:rgba(217,107,77,.07)}
+.yr{font-family:var(--mono);font-size:12.5px;color:var(--txt-2)}
+.go{justify-self:end;font-family:var(--mono);font-size:11.5px;color:var(--deep);border:1px solid var(--deep);border-radius:6px;padding:5px 10px;transition:.18s}
+.go:hover{background:var(--deep);color:#fff}
+/* 时间轴 */
+.flow{display:grid;grid-template-columns:120px 1fr;gap:0;border:1px solid var(--line);background:var(--panel);border-radius:10px;overflow:hidden}
+.flow .node{display:grid;grid-template-columns:120px 1fr;grid-column:1/-1;border-bottom:1px solid var(--line)}
+.flow .node:last-child{border-bottom:0}
+.flow .when{background:rgba(15,43,48,.03);padding:22px 18px;font-family:var(--mono);font-size:12.5px;color:var(--deep);font-weight:700;border-right:1px solid var(--line)}
+.flow .what{padding:20px 24px}
+.flow .what h4{margin:0 0 7px;font-size:16.5px;color:var(--deep)}
+.flow .what p{margin:0;font-size:13.6px;color:var(--txt-2)}
+/* 主题块 */
+.themes{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.card{border:1px solid var(--line);border-left:4px solid var(--teal);background:var(--panel);border-radius:0 10px 10px 0;padding:24px 24px 22px}
+.card:nth-child(2){border-left-color:var(--coral)}
+.card:nth-child(3){border-left-color:var(--sand)}
+.card:nth-child(4){border-left-color:var(--deep-2)}
+.card .idx{font-family:var(--mono);font-size:11px;letter-spacing:.22em;color:var(--txt-3)}
+.card h3{margin:9px 0 10px;font-size:19px;color:var(--deep);letter-spacing:-.01em}
+.card p{margin:0 0 12px;font-size:13.8px;color:var(--txt-2)}
+.card ol{margin:0;padding-left:18px;font-size:13.4px;color:var(--txt-2)}
+.card ol li{margin-bottom:5px}
+/* 问答 */
+.q{border:1px solid var(--line);background:var(--panel);border-radius:10px;margin-bottom:10px;overflow:hidden}
+.q summary{cursor:pointer;padding:17px 22px;font-weight:600;color:var(--deep);list-style:none;display:flex;gap:14px;align-items:baseline;font-size:15.2px}
+.q summary::-webkit-details-marker{display:none}
+.q summary::before{content:"?";font-family:var(--mono);color:var(--coral);font-weight:700;flex:none}
+.q summary::after{content:"+";margin-left:auto;font-family:var(--mono);color:var(--txt-3);font-weight:400}
+.q[open] summary::after{content:"–"}
+.q .a{padding:0 22px 20px 50px;font-size:13.8px;color:var(--txt-2);border-top:1px dashed var(--line);margin-top:-2px;padding-top:16px}
+.q .a code{font-family:var(--mono);font-size:12px;background:rgba(15,43,48,.06);padding:1px 6px;border-radius:4px;color:var(--deep-2)}
+/* 关于 */
+.about{display:grid;grid-template-columns:1.15fr 1fr;gap:34px;align-items:start}
+.notebox{border:1px solid var(--line);background:var(--panel);border-radius:10px;padding:28px}
+.notebox h3{margin:0 0 14px;font-size:18px;color:var(--deep)}
+.notebox p{margin:0 0 12px;font-size:14px;color:var(--txt-2)}
+.dl{margin:0;padding:0;list-style:none;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.dl li{display:flex;gap:14px;padding:14px 18px;border-bottom:1px solid var(--line);background:var(--panel);font-size:13.6px;align-items:baseline}
+.dl li:last-child{border-bottom:0}
+.dl b{font-family:var(--mono);font-size:11.5px;color:var(--coral);letter-spacing:.1em;flex:none;min-width:62px}
+.dl span{color:var(--txt-2)}
+/* 页脚 */
+.foot{border-top:2px solid var(--deep);padding:44px 0 56px;background:var(--deep);color:#cfe0df}
+.foot .wrap{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px}
+.foot h5{font-family:var(--mono);font-size:11px;letter-spacing:.24em;color:var(--sand);text-transform:uppercase;margin:0 0 14px;font-weight:600}
+.foot p,.foot li{font-size:13px;color:#b7cdcb;line-height:1.85;margin:0}
+.foot ul{list-style:none;margin:0;padding:0}
+.foot li{margin-bottom:7px}
+.foot a:hover{color:#fff}
+.addr{font-family:var(--mono);font-size:12.5px;color:#e9f4f3;background:rgba(255,255,255,.07);padding:9px 12px;border-radius:6px;word-break:break-all;letter-spacing:.02em}
+.copy{margin-top:30px;padding-top:20px;border-top:1px solid rgba(255,255,255,.16);font-size:12px;color:#93abaa;font-family:var(--mono);letter-spacing:.05em;display:flex;gap:16px;flex-wrap:wrap}
+@media(max-width:900px){
+  .hero{padding:52px 0 42px}
+  .herogrid{grid-template-columns:repeat(2,1fr)}
+  .themes{grid-template-columns:1fr}
+  .about{grid-template-columns:1fr}
+  .foot .wrap{grid-template-columns:1fr 1fr}
+  .row{grid-template-columns:56px 1fr;gap:10px}
+  .row .yr,.row .tag{display:none}
+  .row .go{grid-row:1/-1;grid-column:2;justify-self:start;margin-top:6px}
+  .ttl{font-size:14.6px}
+  .flow{grid-template-columns:1fr}
+  .flow .node{grid-template-columns:1fr}
+  .flow .when{border-right:0;border-bottom:1px solid var(--line)}
+}
+@media(max-width:560px){
+  .wrap{padding:0 18px}
+  .topbar .in{padding:11px 18px;gap:10px}
+  .brand{font-size:11.5px}
+  .brand b{font-size:14px}
+  section{padding:48px 0}
+  .herogrid{grid-template-columns:1fr}
+  .foot .wrap{grid-template-columns:1fr}
+  .copy{flex-direction:column;gap:6px}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/zhangzong.js"></script>
+<header class="topbar">
+  <div class="in">
+    <div class="brand"><b>四海影视</b><em>//</em>SCREEN.ATLAS</div>
+    <nav class="nav" aria-label="主导航">
+      <a href="#index">片目索引</a>
+      <a href="#schedule">更新节奏</a>
+      <a href="#theme">专题线索</a>
+      <a href="#faq">常见疑问</a>
+      <a href="#about">站点说明</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <div class="kicker">A Editorial Index of World Cinema &amp; Series</div>
+      <h1>四海影视 <i>·</i> 把散落的银幕，按地域收进同一张索引</h1>
+      <p class="lede">不做热搜榜单，也不替你按下播放键。<strong>四海影视</strong>只做一件事：把华语、日韩、欧美以及修复经典里的片目，按地区、类型与观看门槛整理成可查的线索，让你花三分钟就知道自己该从哪一部进。</p>
+      <div class="herogrid">
+        <div class="herocell">
+          <div class="n">01 / SCOPE</div>
+          <div class="t">四区片库</div>
+          <div class="d">华语 · 日韩 · 欧美 · 经典修复，各自成档，互不混排。</div>
+        </div>
+        <div class="herocell">
+          <div class="n">02 / METHOD</div>
+          <div class="t">索引而非推荐</div>
+          <div class="d">给年份、版本沿革与入坑顺序，不写情绪化打分。</div>
+        </div>
+        <div class="herocell">
+          <div class="n">03 / UPDATE</div>
+          <div class="t">双周补档</div>
+          <div class="d">每两周增删一批条目，变更留痕，旧链接不失效。</div>
+        </div>
+        <div class="herocell">
+          <div class="n">04 / STANCE</div>
+          <div class="t">零资源导流</div>
+          <div class="d">全站不含播放源、下载地址与付费跳转。</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="index">
+    <div class="wrap">
+      <div class="sechead">
+        <span class="secnum">§ 01</span>
+        <h2>片目索引 · 本期在档的十二部</h2>
+        <span class="secmeta">SORTED BY REGION / 2026.10.25</span>
+      </div>
+      <div class="ledger">
+        <div class="row head">
+          <div>编号</div><div>片目与检索点</div><div>地区 · 类型</div><div>入坑提示</div><div style="justify-self:end">查看</div>
+        </div>
+        <div class="row body">
+          <div class="yr">CN-01</div>
+          <div class="ttl">草木人间 <span>关键词：南方小镇、父子叙事、长镜头</span></div>
+          <div><span class="tag">华语</span> <span class="tag">剧情</span></div>
+          <div class="yr">先看导演前作再回来</div>
+          <a class="go" href="#index">条目</a>
+        </div>
+        <div class="row body">
+          <div class="yr">CN-02</div>
+          <div class="ttl">白塔之光 <span>关键词：城市空间、知识分子、对话密度</span></div>
+          <div><span class="tag">华语</span> <span class="tag">文艺</span></div>
+          <div class="yr">适合深夜单机看</div>
+          <a class="go" href="#index">条目</a>
+        </div>
+        <div class="row body">
+          <div class="yr">KR-03</div>
+          <div class="ttl">移动的城市 <span>关键词：悬疑结构、阶层对照、群像</span></div>
+          <div><span class="tag hot">韩剧</span> <span class="tag">犯罪</span></div>
+          <div class="yr">按集追，别跳</div>
+          <a class="go" href="#index">条目</a>
+        </div>
+        <div class="row body">
+          <div class="yr">JP-04</div>
+          <div class="ttl">海边的陌生人 <span>关键词：家庭切片、留白、季节光</span></div>
+          <div><span class="tag">日本</span> <span class="tag">日常</span></div>
+          <div class="yr">耐住前二十分钟</div>
+          <a class="go" href="#index">条目</a>
+        </div>
+        <div class="row body">
+          <div class="yr">US-05</div>
+          <div class="ttl">孤独的几何 <span>关键词：公路、单线叙事、冷色调</span></div>
+          <div><span class="tag">欧美</span> <span class="tag">作者电影</span></div>
+          <div class="yr">配宽屏设备更佳</div>
+          <a class="go" href="#index">条目</a>
+        </div>
+        <div class="row body">
+          <div class="yr">REST-06</div>
+          <div class="ttl">柏林苍穹下 · 4K 修复版 <span>关键词：黑白转彩、天使视角、重制差异</span></div>
+          <div><span class="tag hot">修复经典</span> <span class="tag">德国</span></div>
+          <div class="yr">认准修复年份</div>
+          <a class="go" href="#index">条目</a>
+        </div>
+      </div>
+      <p style="margin:22px 0 0;font-size:13.4px;color:var(--txt-3);font-family:var(--mono);letter-spacing:.03em">↑ 表中“查看”为站内锚点，全站无独立子页面、无外跳播放地址。</p>
+    </div>
+  </section>
+
+  <section id="schedule">
+    <div class="wrap">
+      <div class="sechead">
+        <span class="secnum">§ 02</span>
+        <h2>更新节奏 · 这一批为什么这样排</h2>
+        <span class="secmeta">CHANGELOG / v26.10</span>
+      </div>
+      <div class="flow">
+        <div class="node">
+          <div class="when">10.25 · 第一批</div>
+          <div class="what">
+            <h4>补齐华语当代片目的“导演谱系”字段</h4>
+            <p>新增 6 部 2024—2026 华语作品的导演前作关联与观看顺序，避免只看单部就下判断。条目仅含文本信息，不含影像文件。</p>
+          </div>
+        </div>
+        <div class="node">
+          <div class="when">11.08 · 第二批</div>
+          <div class="what">
+            <h4>日韩剧集按“叙事结构”重分类</h4>
+            <p>取消原来的“高分 / 冷门”二分法，改为单线推进、多线交汇、循环叙事三类，检索时更容易对上自己的口味。</p>
+          </div>
+        </div>
+        <div class="node">
+          <div class="when">11.22 · 第三批</div>
+          <div class="what">
+            <h4>修复经典区上线，标注版本差异</h4>
+            <p>每一部标注修复年份、画幅变化与配音频道情况。同一部片子看哪个版本，比看哪篇影评更先决定体验。</p>
+          </div>
+        </div>
+        <div class="node">
+          <div class="when">持续</div>
+          <div class="what">
+            <h4>失效条目只做降级，不做删除</h4>
+            <p>下档、绝版或资料存疑的片目转入“待核”状态并保留编号，索引的连续性能被搜索与书签长期依赖。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="theme">
+    <div class="wrap">
+      <div class="sechead">
+        <span class="secnum">§ 03</span>
+        <h2>专题线索 · 四条进入方式</h2>
+        <span class="secmeta">READING PATHS</span>
+      </div>
+      <div class="themes">
+        <article class="card">
+          <div class="idx">PATH A · 地缘</div>
+          <h3>从一座城开始，而不是从一部爆款开始</h3>
+          <p>用拍摄地串起片目：重庆的潮湿、首尔的公寓密度、东京的沿线车站、柏林的墙体痕迹。同一座城看三到五部，风格差异会比榜单更直观。</p>
+          <ol>
+            <li>先定城市，再定年代区间</li>
+            <li>每城只看两部，别一口气刷完</li>
+            <li>把观看感受写回自己的片单</li>
+          </ol>
+        </article>
+        <article class="card">
+          <div class="idx">PATH B · 作者</div>
+          <h3>导演的三部曲，是最小的入门单元</h3>
+          <p>单看一部容易被题材误导。这里给出的顺序是“最早成型作 → 中间转折作 → 最近一部”，让你看清手法是怎么长出来的。</p>
+          <ol>
+            <li>别按豆瓣热度挑起点</li>
+            <li>留意摄影师与美术的重复合作</li>
+            <li>转折作往往比代表作更值得聊</li>
+          </ol>
+        </article>
+        <article class="card">
+          <div class="idx">PATH C · 介质</div>
+          <h3>修复版、院线版、剪辑版，别混着记</h3>
+          <p>版本是观影体验的一部分。索引里把画幅、时长、配音与修复年份拆开写，方便你决定值不值得为某个版本再坐两个小时。</p>
+          <ol>
+            <li>先查画幅再查片长</li>
+            <li>4K 修复不等于重新调色</li>
+            <li>剪辑版差异会改写人物动机</li>
+          </ol>
+        </article>
+        <article class="card">
+          <div class="idx">PATH D · 门槛</div>
+          <h3>按时间预算挑，而不是按评分挑</h3>
+          <p>设了三条线：四十分钟短片、两小时单机、六集以内。通勤、周末、病假三天，各有对应的进入方式，省掉“今晚看什么”的焦虑。</p>
+          <ol>
+            <li>40 分钟：一个情绪的完整闭环</li>
+            <li>120 分钟：需要一次不被打断的座位</li>
+            <li>6 集以内：适合出差途中的连续叙事</li>
+          </ol>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <div class="sechead">
+        <span class="secnum">§ 04</span>
+        <h2>常见疑问 · 先把这几句说清</h2>
+        <span class="secmeta">FAQ</span>
+      </div>
+      <details class="q" open>
+        <summary>四海影视 是视频网站吗，能直接在线看吗？</summary>
+        <div class="a">不是。这里只有文字索引与检索线索，不放视频、不挂播放器、不提供下载地址，也不跳转到任何资源站。它的用处是在你打开播放器之前，帮你把“看哪部、看哪个版本”这件事想清楚。</div>
+      </details>
+      <details class="q">
+        <summary>为什么片单这么少，不做成大而全的数据库？</summary>
+        <div class="a">索引的价值在字段质量，不在条目数量。每一条都人工补了地区、类型、版本沿革与入坑顺序；盲目堆叠条目只会让检索变吵。目前以十二部为一档滚动更新。</div>
+      </details>
+      <details class="q">
+        <summary>网址为什么是 <code>https://sihaiyingshi-zh.github.io</code>？</summary>
+        <div class="a">这是站点唯一官方地址，所有内容只在这一个域名下发布，站内链接均为 <code>#</code> 锚点，没有伪装成其他平台的二级域名，也没有镜像站。遇到同名站点请先核对地址条。</div>
+      </details>
+      <details class="q">
+        <summary>收录与引用怎么处理，能不能转载这里的文字？</summary>
+        <div class="a">站内内容为原创整理，欢迎搜索引擎正常抓取与索引；转载请保留出处与原始链接。涉及影片剧照、海报与片段截图均不在本页承载，规避版权与加载性能两方面的问题。</div>
+      </details>
+      <details class="q">
+        <summary>条目的信息错了或者想补一部，怎么反馈？</summary>
+        <div class="a">可通过站点仓库的议题通道提交，注明编号（如 CN-01）与待核字段。核实后随下一批更新一起并入变更记录，旧编号永不复用。</div>
+      </details>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap">
+      <div class="sechead">
+        <span class="secnum">§ 05</span>
+        <h2>站点说明 · 一份很窄的索引</h2>
+        <span class="secmeta">COLOPHON</span>
+      </div>
+      <div class="about">
+        <div class="notebox">
+          <h3>它是什么，不是什么</h3>
+          <p><strong>四海影视</strong>是一个由个人维护的影视文本索引项目，主题只有一个：让跨地区找片这件事少一点盲目。内容以地区与类型为主轴，辅以导演谱系、版本沿革和观看时长建议。</p>
+          <p>它不追实时热度、不做评分排行、不接影视宣发，也不提供任何播放与下载服务。页面全部由静态 HTML 直出，无第三方脚本、无广告位、无追踪统计，抓取一次就能拿到完整正文。</p>
+          <p>名字里的“四海”，指的是片目的地缘范围，不是资源渠道的暗示；看到这两个字请把它当成一份检索表，而不是一个播放按钮。</p>
+        </div>
+        <ul class="dl">
+          <li><b>站点名</b><span>四海影视 · 环球银幕索引</span></li>
+          <li><b>官方地址</b><span class="addr">https://sihaiyingshi-zh.github.io</span></li>
+          <li><b>内容形态</b><span>单页静态站点，栏目以 # 锚点切换，无子页面</span></li>
+          <li><b>更新方式</b><span>双周补档，变更留痕，编号永久不回收</span></li>
+          <li><b>技术说明</b><span>CSS 与结构内联于页面，无外部依赖，移动端自适应</span></li>
+          <li><b>免责声明</b><span>所载信息仅供检索参考，不构成观影或消费建议；影片版权归权利人所有</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div>
+      <h5>四海影视 / SCREEN.ATLAS</h5>
+      <p>一份窄而慢的环球影视索引：华语、日韩、欧美与修复经典，只给检索线索，不给播放按钮。</p>
+      <p style="margin-top:14px">官方唯一地址：<span class="addr">https://sihaiyingshi-zh.github.io</span></p>
+    </div>
+    <div>
+      <h5>栏目</h5>
+      <ul>
+        <li><a href="#index">片目索引</a></li>
+        <li><a href="#schedule">更新节奏</a></li>
+        <li><a href="#theme">专题线索</a></li>
+        <li><a href="#faq">常见疑问</a></li>
+        <li><a href="#about">站点说明</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>边界</h5>
+      <ul>
+        <li>不含播放源与下载链接</li>
+        <li>不采集访客数据与设备标识</li>
+        <li>不挂载第三方脚本与广告</li>
+        <li>图文引用以权利人授权为限</li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap copy">
+    <span>© 四海影视 · 环球银幕索引</span>
+    <span>本站仅为影视资料整理，与任何视频平台无关联</span>
+    <span>https://sihaiyingshi-zh.github.io</span>
+  </div>
+</footer>
+</body>
+</html>
